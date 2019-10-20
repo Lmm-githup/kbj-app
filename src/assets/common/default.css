@@ -1,0 +1,42 @@
+html,
+body {
+  padding-top: constant(safe-area-inset-top);
+  padding-bottom: constant(safe-area-inset-bottom);
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 18px;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 300ms;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all 300ms;
+}
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+.full-square-img {
+  vertical-align: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vux-1px-b::after {
+  z-index: 1;
+}
